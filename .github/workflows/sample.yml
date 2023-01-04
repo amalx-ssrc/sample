@@ -1,6 +1,6 @@
 name: sample workflow 
 
-on: push 
+on: push
 
 jobs: 
 
@@ -12,7 +12,7 @@ jobs:
         
       - name: building pushing docker images
         run: |
-          docker login -u dockertry1729 -p fMmcG842tFP5Qk5
+          docker login -u ${{ secrets.USERNAME }} -p ${{ secrets.PASS }}
 
           docker build -t pythonappnew:1.0 .
 
